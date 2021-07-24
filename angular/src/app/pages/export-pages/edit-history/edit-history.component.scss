@@ -1,0 +1,30 @@
+@import '../../../@theme/styles/themes';
+@include nb-install-component() {
+    nb-card {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.order-table {
+    thead th.ng2-smart-actions.ng-star-inserted {
+        width: 1em;
+    }
+    td.ng2-smart-actions {
+        float: right !important;
+        ng2-st-tbody-custom {
+            float: right;
+            width: auto;
+            display: flex;
+            margin-top: 0.5em;
+            margin-left: 1em;
+            a.ng2-smart-action.ng2-smart-action-custom-custom.ng-star-inserted {
+                margin-top: 5em;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.nb-theme-default ng2-smart-table .ng2-smart-actions a.ng2-smart-action:not(:last-child) {
+    border-right: 0px;
+}

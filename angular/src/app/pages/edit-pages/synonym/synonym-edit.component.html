@@ -1,0 +1,18 @@
+<nb-card [nbSpinner]="tableLoading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="Loading">
+    <nb-card-header>
+        <h6>Synonym Dictionary</h6>
+    </nb-card-header>
+    <nb-card-body>
+        <div style="float:right;">
+            <label for="file-upload" class="custom-file-upload">
+                <input type="file" id="file-upload" accept=".csv, text/csv" (change)="prepareFile($event.target.files)">
+                <nb-icon icon="cloud-upload-outline"></nb-icon> Upload File
+            </label>
+        </div>
+        <br>
+        <div>
+            <ng2-smart-table *ngIf="tableVisibility" [settings]="settings" [source]="rows" (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)" (createConfirm)="onCreateConfirm($event)">
+            </ng2-smart-table>
+        </div>
+    </nb-card-body>
+</nb-card>

@@ -1,0 +1,11 @@
+<nb-card>
+    <nb-card-header>{{ title }}</nb-card-header>
+    <nb-card-body>
+        <p>Success: {{ success }}</p>
+        <p>Failure: {{ failure }}</p>
+    </nb-card-body>
+    <nb-card-footer>
+        <div style="float: right;"> <button nbButton small semi-round status="success" (click)="dismiss()">OK</button>
+        </div>
+    </nb-card-footer>
+</nb-card>

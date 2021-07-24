@@ -1,0 +1,36 @@
+<nb-card [nbSpinner]="dataLoading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="Loading">
+    <nb-card-header>
+        <h6>Disease Table</h6>
+    </nb-card-header>
+    <nb-card-body>
+        <p><span>Select Insurance Type: </span></p>
+    </nb-card-body>
+    <nb-card-body>
+        <div class="row">
+            <div class="column left">
+                <nb-select id="insur-type" [selected]="selectedType" fullWidth placeholder="Select Insurance Type" required status="primary" (selectedChange)="selectInsuranceType($event)">
+                    <nb-option *ngFor="let type of insuranceTypes" value="{{ type }}">{{ type }}</nb-option>
+                </nb-select>
+            </div>
+            <div class="column right" style="float: right;">
+                <label for="view-upload" class="custom-button mr-4">
+                    <button id="view-upload" class="custom-button" (click)="viewDataTable()"></button>
+                    <nb-icon icon="cloud-download-outline"></nb-icon> View Data
+                </label>
+                <label for="file-upload" class="custom-file-upload">
+                    <input type="file" id="file-upload" accept=".csv, text/csv"
+                        (change)="prepareFile($event.target.files)">
+                    <nb-icon icon="cloud-upload-outline"></nb-icon> Upload File
+                </label>
+                <label for="template-download" class="custom-download">
+                    <button id="template-download" class="custom-button" (click)="getTemplate()"></button>
+                    <nb-icon icon="cloud-download-outline"></nb-icon> Download Latest Version
+                </label>
+            </div>
+        </div>
+        <div>
+            <ng2-smart-table *ngIf="tableVisibility" [settings]="settings" [source]="rows">
+            </ng2-smart-table>
+        </div>
+    </nb-card-body>
+</nb-card>

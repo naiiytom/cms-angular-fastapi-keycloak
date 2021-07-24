@@ -1,0 +1,54 @@
+@import '../../../@theme/styles/themes';
+@include nb-install-component() {
+    nb-card {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+div.button-after-table {
+    position: relative;
+    right: -10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button.custom-button {
+    display: none;
+}
+
+.custom-button {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+:host {
+     ::ng-deep .text .ng2-smart-title {
+        width: 300px;
+    }
+     ::ng-deep .plan1 .ng2-smart-title {
+        width: 100px;
+    }
+     ::ng-deep .plan2 .ng2-smart-title {
+        width: 100px;
+    }
+     ::ng-deep .plan3 .ng2-smart-title {
+        width: 100px;
+    }
+     ::ng-deep .plan4 .ng2-smart-title {
+        width: 100px;
+    }
+     ::ng-deep .modified_date .ng2-smart-title {
+        width: 50px;
+    }
+}

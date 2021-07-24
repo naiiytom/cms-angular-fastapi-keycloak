@@ -1,0 +1,10 @@
+<nb-card [nbSpinner]="tableLoading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="Loading">
+    <nb-card-header>
+        <h6>Export Edit History</h6>
+    </nb-card-header>
+
+    <nb-card-body>
+        <ng2-smart-table *ngIf="tableVisibility" class="order-table" [settings]="settings" [source]="rows" (custom)="onCustomAction($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>

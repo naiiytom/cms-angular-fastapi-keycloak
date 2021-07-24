@@ -1,0 +1,19 @@
+<nb-card [nbSpinner]="pageLoading" nbSpinnerStatus="danger" nbSpinnerSize="large" [nbSpinnerMessage]="loadingMessage">
+    <nb-card-header>FAQ Upload | {{ filename }}</nb-card-header>
+    <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="data" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+    <nb-card-footer>
+        <div style="float: right;">
+            <label for="file-upload" class="custom-button mr-4">
+                <button id="file-upload" class="custom-button" (click)="uploadFile()">Upload</button>
+                <nb-icon icon="cloud-upload-outline"></nb-icon> Upload
+            </label>
+            <label for="file-cancel" class="custom-button">
+                <button id="file-cancel" class="custom-button" (click)="onResetConfirm($event)">Cancel</button>
+                <nb-icon icon="alert-triangle-outline"></nb-icon> Cancel
+            </label>
+        </div>
+    </nb-card-footer>
+</nb-card>

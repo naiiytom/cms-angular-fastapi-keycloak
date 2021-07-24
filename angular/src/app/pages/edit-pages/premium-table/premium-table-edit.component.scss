@@ -1,0 +1,42 @@
+@import '../../../@theme/styles/themes';
+@include nb-install-component() {
+    nb-card {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+div.button-after-table {
+    position: relative;
+    right: -10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+button.custom-button {
+    display: none;
+}
+
+.custom-button {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-download {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    align-items: center;
+    align-self: center;
+}
