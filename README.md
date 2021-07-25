@@ -1,6 +1,6 @@
-# CMS
+# DMS
 
-A FAQ and Knowledge Base Data Management System
+A Data Management System
 
 ## Directory structures
 
