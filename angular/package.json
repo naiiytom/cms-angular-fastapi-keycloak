@@ -39,7 +39,7 @@
         "@nebular/eva-icons": "7.0.0",
         "@nebular/security": "7.0.0",
         "@nebular/theme": "7.0.0",
-        "bootstrap": "4.3.1",
+        "bootstrap": "5.0.0",
         "classlist.js": "1.1.20150312",
         "core-js": "2.5.1",
         "eva-icons": "^1.1.3",
