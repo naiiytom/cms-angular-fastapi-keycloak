@@ -21,9 +21,153 @@ export class FaqEditComponent implements OnInit {
   ) { }
 
   data: IFaqTypes[];
-  rows: IFaqTypes[] = [];
+  rows: IFaqTypes[] = [{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+},
+{
+    answer: 'answeer',
+    code: 'bumble',
+    creation_date: new Date(),
+    id: 'bumble',
+    modified_date:new Date(),
+    package_type: 'bumble',
+    plan_type: 'bumble',
+    policy_type: 'bumble',
+    question: 'bumble',
+    updated_by: 'bumble',
+    visible_state: 1
+}
+
+];
   insuranceTypes: any[];
-  tableVisibility: boolean = false;
+  tableVisibility: boolean = true;
   tableLoading: boolean = false;
   filename: string;
   selectedType: string = 'Elite_health';

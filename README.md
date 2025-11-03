@@ -54,3 +54,6 @@ Clone this repository and change `KEYCLOAK_FRONTEND_URL` to your keycloak revers
 - [Ngx Admin](https://github.com/akveo/ngx-admin)
 - [Ng2 Smart Table](https://akveo.github.io/ng2-smart-table/#/documentation)
 - [TypeScript](https://www.typescriptlang.org/docs/)
+
+
+use yarn start

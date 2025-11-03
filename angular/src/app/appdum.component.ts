@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-app',
+  selector: 'ngx-appdum',
   template: `
-  <ngx-appdum>
 
+          <ng-content select="router-outlet"></ng-content>
 
-    <router-outlet></router-outlet>
-  </ngx-appdum>
   `,
 })
-export class AppComponent { 
+export class AppDumComponent { 
 
   constructor(){
     console.log('app componnet loaded')
