@@ -21,30 +21,6 @@ app = Flask(__name__)
 CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024    # 50 Mb limit
 
-# @app.get('/')
-# def root():
-#     return {'hello': 'world'}
-
-
-# @app.get('/file')
-# def download_file():
-#     path = 'tmp/return.csv'
-#     return FileResponse(path=path, filename='return.csv', media_type='text/csv')
-
-
-# @app.get('/premium-table')
-# def download_premium_table():
-#     path = 'tmp/byproduct/Elite_health.csv'
-#     return FileResponse(path=path, filename='return.csv', media_type='text/csv')
-
-
-# @app.post('/premium-table')
-# def upload_premium_table(req: Request):
-#     body = req.body
-#     print(body)
-#     return ['success']
-
-
 @app.route("/export_history", methods=['GET'])
 def export_history():
     filename = request.args.get('filename')
@@ -80,35 +56,17 @@ def create_backup_history():
     print(package_name, doc_type, username)
 
     if doc_type == 'disease':
-        # output = None
-        # df = pd.DataFrame.from_dict([doc['_source'] for doc in output])
-        # df.to_csv(csv_buffer)
-        # resp = put_csv_file_into_s3(
-        #     username, package_name, doc_type, 'premium-table', csv_buffer)
-        # return resp
         return {'status': 501, 'message': 'Not implemented'}
     elif doc_type == 'premium':
-        # output = None
-        # df = pd.DataFrame.from_dict([doc['_source'] for doc in output])
-        # df.to_csv(csv_buffer)
-        # resp = put_csv_file_into_s3(
-        #     username, package_name, doc_type, 'premium-table', csv_buffer)
-        # return resp
         return {'status': 501, 'message': 'Not Implemented'}
     elif doc_type == 'faq':
         output = get_faq_from_package(package_name, 10000, 0)
-        # print(output['hits']['hits'])
         df = pd.DataFrame.from_dict([doc['_source'] for doc in output['hits']['hits']])
         df.to_csv(csv_buffer)
         resp = put_csv_file_into_s3(
             username, package_name, doc_type, 'edit-history', csv_buffer)
         return resp
     elif doc_type == 'kb':
-        # output = get_kb_from_package(package_name, 10000, 0)
-        # df = pd.DataFrame.from_dict([doc['_source'] for doc in output])
-        # df.to_csv(csv_buffer)
-        # resp = put_csv_file_into_s3(
-        #     username, package_name, doc_type, 'edit-history', csv_buffer)
         return {'status': 501, 'message': 'Not implemented yet'}
     else:
         return {'status': 403, 'message': 'Forbidden'}
