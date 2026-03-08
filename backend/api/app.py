@@ -18,12 +18,17 @@ origins = [
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 app = Flask(__name__)
+
+def sanitize_input(user_input):
+    if user_input is None:
+        return None
+    return os.path.basename(user_input)
 CORS(app)
 app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024    # 50 Mb limit
 
 @app.route("/export_history", methods=['GET'])
 def export_history():
-    filename = request.args.get('filename')
+    filename = sanitize_input(request.args.get('filename'))
     print(filename)
     presigned = get_export_history_presigned_url(filename)
     return {'url': presigned}
@@ -31,7 +36,7 @@ def export_history():
 
 @app.route("/export_premium_table", methods=['GET'])
 def export_premium_table():
-    package_name = request.args.get('package_name')
+    package_name = sanitize_input(request.args.get('package_name'))
     print(package_name)
     presigned = get_premium_table_presigned_url(package_name)
     return {'url': presigned}
@@ -39,7 +44,7 @@ def export_premium_table():
 
 @app.route("/export_disease_table", methods=['GET'])
 def export_disease_table():
-    package_name = request.args.get('package_name')
+    package_name = sanitize_input(request.args.get('package_name'))
     print(package_name)
     presigned = get_disease_table_presigned_url(package_name)
     return {'url': presigned}
@@ -50,9 +55,9 @@ def create_backup_history():
     csv_buffer = StringIO()
     json_list = request.get_json()
     print(json_list)
-    package_name = json_list['package_name']
+    package_name = sanitize_input(json_list['package_name'])
     doc_type = json_list['type']
-    username = json_list['username']
+    username = sanitize_input(json_list['username'])
     print(package_name, doc_type, username)
 
     if doc_type == 'disease':
