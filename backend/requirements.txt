@@ -1,4 +1,8 @@
-boto3
-aiofiles
-fastapi
-uvicorn
+boto3>=1.26.137
+aiofiles>=23.1.0
+fastapi>=0.95.2
+uvicorn>=0.22.0
+flask>=2.3.2
+flask-cors>=3.0.10
+pandas>=2.0.2
+requests>=2.31.0

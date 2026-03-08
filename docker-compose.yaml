@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    image: postgres:13
+    image: postgres:13-alpine
     restart: always
     environment:
       POSTGRES_DB: keycloak
@@ -16,7 +16,7 @@ services:
   keycloak:
     depends_on:
       - postgres
-    image: jboss/keycloak:13.0.0
+    image: jboss/keycloak:16.1.1
     command: [ "-Dkeycloak.migration.strategy=IGNORE_EXISTING" ]
     restart: always
     ports:
