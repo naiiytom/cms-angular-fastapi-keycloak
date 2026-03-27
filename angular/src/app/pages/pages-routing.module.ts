@@ -12,27 +12,27 @@ const routes: Routes = [{
   children: [
     {
       path: 'dashboard',
-      canActivate: [AuthGuard],
+    /*   canActivate: [AuthGuard], */
       data: { roles: ['user'] },
       component: DashboardComponent,
     },
     {
       path: 'edit',
-      canActivate: [AuthGuard],
+     /*  canActivate: [AuthGuard], */
       data: { roles: ['user'] },
       loadChildren: () => import('./edit-pages/edit-pages.module')
         .then(m => m.EditPagesModule),
     },
     {
       path: 'upload',
-      canActivate: [AuthGuard],
+   /*    canActivate: [AuthGuard], */
       data: { roles: ['user'] },
       loadChildren: () => import('./upload-pages/upload-pages.module')
         .then(m => m.UploadPagesModule),
     },
     {
       path: 'export',
-      canActivate: [AuthGuard],
+   /*    canActivate: [AuthGuard], */
       data: { roles: ['admin'] },
       loadChildren: () => import('./export-pages/export-pages.module')
         .then(m => m.ExportPagesModule),
