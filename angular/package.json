@@ -52,7 +52,7 @@
         "ng2-completer": "^9.0.1",
         "ng2-smart-table": "^1.7.2",
         "ngx-csv-parser": "^0.0.7",
-        "node-sass": "^7.0.0",
+        "node-sass": "^5.0.0",
         "normalize.css": "6.0.0",
         "pace-js": "1.0.2",
         "roboto-fontface": "0.8.0",
