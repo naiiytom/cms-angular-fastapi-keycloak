@@ -15,6 +15,8 @@ import {
   NbChatModule,
   NbDatepickerModule,
   NbDialogModule,
+  NbCardModule,
+  NbListModule,
   NbMenuModule,
   NbSidebarModule,
   NbToastrModule,
@@ -23,15 +25,17 @@ import {
 import { AuthGuard } from './services/auth-guard.service';
 import { KeycloakAngularModule, KeycloakService } from 'keycloak-angular';
 import { initializeKeycloak } from './init/keycloak-init.factory';
+import { AppDumComponent } from './appdum.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,AppDumComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    NbListModule ,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),
@@ -46,12 +50,12 @@ import { initializeKeycloak } from './init/keycloak-init.factory';
   bootstrap: [AppComponent],
   providers: [
     AuthGuard,
-    {
+    /* {
       provide: APP_INITIALIZER,
       useFactory: initializeKeycloak,
       multi: true,
       deps: [KeycloakService],
-    },
+    }, */
   ],
 })
 export class AppModule { }
